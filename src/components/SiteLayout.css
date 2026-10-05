@@ -1,0 +1,25 @@
+.site-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.site-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-main > * {
+  flex: 1;
+}
+
+.skip {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  transform: translateY(-200%);
+}
+
+.skip:focus {
+  transform: none;
+}

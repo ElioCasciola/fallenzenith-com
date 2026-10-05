@@ -1,0 +1,54 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 24px 90px;
+}
+
+.home h1 { margin: 0; width: min(440px, 100%); font-size: 0; }
+.home img { display: block; width: 100%; height: auto; }
+.home p { margin: 27px 0 0; text-align: center; color: #8a8a8a; font-size: 13px; line-height: 1.6; }
+.home-logo { position: relative; }
+.logo-embers { position: absolute; inset: 0; overflow: visible; pointer-events: none; }
+
+.logo-ember {
+  /* Inline JSX styles override these defaults for each ember. */
+  --x: 50%;
+  --y: 50%;
+  --size: 4px;
+  --duration: 3s;
+  --delay: 0s;
+  --drift: 0px;
+
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: clamp(5px, calc(var(--size) * .9), 7px);
+  height: calc(var(--size) * 2.5);
+  clip-path: polygon(50% 0, 100% 65%, 50% 100%, 0 65%);
+  background: linear-gradient(#fff1a6, #ff8a30 50%, #bd2f12);
+  filter: drop-shadow(0 0 4px #ee4b1b);
+  opacity: 0;
+  animation: ember-rise var(--duration) linear var(--delay) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes ember-rise {
+  0% { opacity: 0; transform: translate3d(0, 7px, 0) rotate(-12deg) scaleY(.45); }
+  12% { opacity: .95; }
+  34% { opacity: .65; }
+  46% { opacity: 1; }
+  64% { opacity: .55; }
+  78% { opacity: .8; }
+  100% { opacity: 0; transform: translate3d(var(--drift), -34px, 0) rotate(14deg) scaleY(.55); }
+}
+
+@media (max-width: 600px) {
+  .home { padding-bottom: 65px; }
+  .home h1 { width: min(360px, 100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-ember { animation: none; display: none; }
+}
