@@ -1,5 +1,5 @@
 import logo from '../assets/logo.webp'
-import animatedLogo from '../assets/logo-particles.webp'
+import animatedLogo from '../assets/logo-particles-60fps.webp'
 import './Home.css'
 
 export default function Home() {
