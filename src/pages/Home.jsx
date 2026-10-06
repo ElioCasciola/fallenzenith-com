@@ -11,7 +11,6 @@ export default function Home() {
           <img src={animatedLogo} width="640" height="427" alt="Fallen Zenith" fetchPriority="high" decoding="async" />
         </picture>
       </h1>
-      <p>Un RPG 2D HD. In sviluppo.</p>
     </div>
   )
 }
