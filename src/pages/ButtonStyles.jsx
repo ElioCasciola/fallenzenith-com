@@ -25,7 +25,7 @@ function Sample({ variation: [title, description, style], number }) {
         <div><h2>{title}</h2><p>{description}</p></div>
       </div>
       <div className={styles.buttons + ' ' + styles[style]} role="group" aria-label={title + ' button previews'}>
-        {['Home', 'Updates', 'Contatti'].map(label => (
+        {['Home', 'Updates', 'Contacts'].map(label => (
           <button key={label} type="button" aria-pressed={selected === label} onClick={() => setSelected(label)}>{label}</button>
         ))}
       </div>

@@ -1,0 +1,195 @@
+.updates-page {
+  width: min(960px, 100%);
+  margin: 0 auto;
+  padding: 64px 24px 120px;
+}
+
+.updates-heading {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.updates-heading h1,
+.update-post h1 {
+  margin: 0;
+  font-family: Cinzel, 'Palatino Linotype', Georgia, serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #e4b775;
+  text-shadow: 0 2px 2px #000, 0 0 18px #8e1f1a30;
+}
+
+.updates-heading p {
+  margin: 12px 0 0;
+  color: #a79b8c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.updates-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.update-card {
+  display: block;
+  min-height: 248px;
+  background: transparent url('../assets/update-card-frame.png') center/100% 100% no-repeat;
+  filter: drop-shadow(0 18px 28px #0008);
+  transition: filter .2s ease;
+}
+
+.update-card article {
+  display: flex;
+  min-height: 248px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 44px clamp(58px, 9vw, 94px);
+}
+
+.update-card time,
+.update-post time {
+  color: #b77943;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.update-card h2 {
+  margin: 8px 0 7px;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(20px, 3vw, 28px);
+  font-weight: 600;
+  letter-spacing: .035em;
+  color: #edc581;
+  text-shadow: 0 2px 2px #000;
+}
+
+.update-card p {
+  max-width: 620px;
+  margin: 0;
+  color: #c1b6a6;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.update-card span {
+  margin-top: 12px;
+  color: #ad6b3b;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.update-card:is(:hover, :focus-visible) {
+  filter:
+    drop-shadow(0 18px 28px #0008)
+    drop-shadow(0 0 2px #f27a4366)
+    drop-shadow(0 0 7px #b9382538);
+}
+
+.update-card:focus-visible {
+  outline-offset: 6px;
+}
+
+.update-post {
+  width: min(760px, calc(100% - 32px));
+  margin: 56px auto 110px;
+  padding: 0 0 64px;
+  background: linear-gradient(145deg, #151210ed, #080809f5);
+  border: 1px solid #9e653b55;
+  box-shadow: 0 26px 70px #0009, inset 0 1px 0 #ffd58f12;
+}
+
+.update-back {
+  display: inline-block;
+  margin: 24px 34px 0;
+  color: #ad7749;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.update-post > header {
+  padding: 42px 54px 34px;
+  text-align: center;
+  border-bottom: 1px solid #9e653b35;
+}
+
+.update-post > header h1 {
+  margin-top: 10px;
+}
+
+.update-post > header p {
+  margin: 14px auto 0;
+  color: #b9ae9e;
+  font: italic 17px/1.6 Georgia, 'Times New Roman', serif;
+}
+
+.update-body {
+  padding: 38px 54px 0;
+  color: #c8bfb1;
+  font: 16px/1.85 Georgia, 'Times New Roman', serif;
+}
+
+.update-body h2,
+.update-body h3,
+.update-body h4 {
+  margin: 38px 0 12px;
+  font-family: Cinzel, Georgia, serif;
+  font-weight: 600;
+  color: #dcb475;
+}
+
+.update-body p,
+.update-body ul,
+.update-body blockquote {
+  margin: 0 0 20px;
+}
+
+.update-body blockquote {
+  padding-left: 20px;
+  color: #a99b8a;
+  font-style: italic;
+  border-left: 2px solid #9c4a32;
+}
+
+.update-body a,
+.update-back:hover {
+  color: #edc581;
+}
+
+.update-body code {
+  padding: 2px 5px;
+  color: #e1bd82;
+  background: #0006;
+}
+
+.update-body hr {
+  margin: 36px 0;
+  border: 0;
+  border-top: 1px solid #9e653b45;
+}
+
+@media (max-width: 600px) {
+  .updates-page { padding: 48px 12px 88px; }
+  .updates-grid { gap: 14px; }
+  .update-card { min-height: 232px; }
+  .update-card article { min-height: 232px; padding: 38px 44px; }
+  .update-card p { font-size: 14px; }
+  .update-post { margin: 38px auto 80px; }
+  .update-back { margin: 20px 24px 0; }
+  .update-post > header { padding: 36px 26px 28px; }
+  .update-body { padding: 30px 26px 0; font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .update-card { transition: none; }
+}

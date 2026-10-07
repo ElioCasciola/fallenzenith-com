@@ -4,7 +4,7 @@ import './Navbar.css'
 const links = [
   { to: '/', label: 'Home', end: true },
   { to: '/updates/', label: 'Updates' },
-  { to: '/contatti/', label: 'Contacts' },
+  { to: '/contacts/', label: 'Contacts' },
 ]
 
 export default function Navbar() {
