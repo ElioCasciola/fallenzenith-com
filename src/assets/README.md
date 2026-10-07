@@ -1,6 +1,10 @@
 # Artwork provenance
 
-The active logo is `logo.webp`. Its ember effect is rendered with CSS in `src/pages/Home.css`.
+The homepage uses `logo-home-particles.webp`, a 1280 × 854 animated WebP at 30 fps with a three-second loop. It uses the higher-resolution transparent PNG supplied by the user as stationary artwork, with particles recovered from the previous logo animation. The approved preview was applied locally on October 7, 2026.
+
+The gold lettering has a modest brightness boost applied directly to the existing artwork. The feather, red splatter, letter shapes, and particle timing are preserved. The animated asset is approximately 2.25 MB; the reduced-motion fallback uses the same lettering adjustment.
+
+`logo-home-static.webp` is the matching fallback for reduced motion. Both homepage assets use a black background that disappears with the existing `mix-blend-mode: screen` rule in `src/pages/Home.css`; the animation is contained entirely in the WebP. The original `logo.webp` remains available for other pages.
 
 # Responsive backgrounds
 

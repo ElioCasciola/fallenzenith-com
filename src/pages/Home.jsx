@@ -1,5 +1,5 @@
-import logo from '../assets/logo.webp'
-import animatedLogo from '../assets/logo-particles-60fps.webp'
+import logo from '../assets/logo-home-static.webp'
+import animatedLogo from '../assets/logo-home-particles.webp'
 import './Home.css'
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
       <h1 className="home-logo">
         <picture>
           <source media="(prefers-reduced-motion: reduce)" srcSet={logo} />
-          <img src={animatedLogo} width="640" height="427" alt="Fallen Zenith" fetchPriority="high" decoding="async" />
+          <img src={animatedLogo} width="1280" height="854" alt="Fallen Zenith" fetchPriority="high" decoding="async" />
         </picture>
       </h1>
     </div>
