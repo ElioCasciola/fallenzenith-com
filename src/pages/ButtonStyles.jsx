@@ -4,20 +4,20 @@ import styles from './ButtonStyles.module.css'
 import logo from '../assets/logo.webp'
 
 const variations = [
-  ['Classic', 'Bronze frame, dark fill.', 'classic'],
-  ['Cut corners', 'Angled edges, gold rim.', 'cut'],
-  ['Capsule', 'Rounded, dark crimson.', 'capsule'],
-  ['Oval', 'A softer, wider silhouette.', 'oval'],
-  ['Lettering only', 'Gold type, no frame.', 'type'],
-  ['Underline', 'A fine red line.', 'underline'],
-  ['Brackets', 'Open sides, no box.', 'brackets'],
-  ['Ribbon', 'Pointed ends, solid gold.', 'ribbon'],
-  ['Open corners', 'Four small corner marks.', 'corners'],
-  ['Medallion', 'Circular, with a fine rim.', 'medallion'],
+  ['Fine lancet', 'Pointed ends, a single gold rim, near-black fill.', 'lancet'],
+  ['Double rim', 'Two fine gold lines enclosing a charcoal surface.', 'doubleRim'],
+  ['Beveled plaque', 'A small metallic bevel over dark graphite.', 'bevel'],
+  ['Gothic arch', 'A gently arched top with a muted bronze border.', 'arch'],
+  ['Engraved stone', 'Inset lettering and small gold corner details.', 'engraved'],
+  ['Iron plate', 'Gunmetal edge, dark fill, and small brass rivets.', 'ironPlate'],
+  ['Diamond tabs', 'A simple dark panel with gold diamonds at its sides.', 'diamondTabs'],
+  ['Clipped plaque', 'Eight clipped corners and a restrained gold edge.', 'chamfer'],
+  ['Gold rails', 'Open sides with slim gold lines above and below.', 'rails'],
+  ['Garnet inset', 'A dark inset framed in gold with a faint crimson seam.', 'garnet'],
 ]
 
 function Sample({ variation: [title, description, style], number }) {
-  const [selected, setSelected] = useState('Home')
+  const [selected, setSelected] = useState(null)
   return (
     <section className={styles.sample}>
       <div className={styles.caption}>
@@ -26,7 +26,7 @@ function Sample({ variation: [title, description, style], number }) {
       </div>
       <div className={styles.buttons + ' ' + styles[style]} role="group" aria-label={title + ' button previews'}>
         {['Home', 'Updates', 'Contacts'].map(label => (
-          <button key={label} type="button" aria-pressed={selected === label} onClick={() => setSelected(label)}>{label}</button>
+          <button key={label} type="button" aria-pressed={selected === label} onClick={() => setSelected(selected === label ? null : label)}>{label}</button>
         ))}
       </div>
     </section>
@@ -39,7 +39,7 @@ export default function ButtonStyles() {
       <header>
         <Link to="/" className={styles.back}>← Back to the site</Link>
         <img src={logo} width="640" height="427" alt="Fallen Zenith" />
-        <h1>10 button variations</h1>
+        <h1>10 more dark button styles</h1>
         <p>Click a button to preview its selected state. Hover or focus to compare.</p>
       </header>
       <main id="main" tabIndex={-1}>

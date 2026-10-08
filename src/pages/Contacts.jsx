@@ -20,7 +20,7 @@ export default function Contacts() {
 
   return (
     <section className="contacts-page" aria-labelledby="contacts-title">
-      <div className="contacts-plaque">
+      <div className="contacts-plaque gold-frame">
         <img className="contacts-feather" src={contactFeather} alt="" aria-hidden="true" />
 
         <div className="contacts-content">

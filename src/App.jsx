@@ -6,12 +6,14 @@ import Updates from './pages/Updates.jsx'
 import UpdatePost from './pages/UpdatePost.jsx'
 import Contacts from './pages/Contacts.jsx'
 import ButtonStyles from './pages/ButtonStyles.jsx'
+import ButtonBackgrounds from './pages/ButtonBackgrounds.jsx'
 
 const titles = {
   '/': 'Fallen Zenith',
   '/updates': 'Updates — Fallen Zenith',
   '/contacts': 'Contacts — Fallen Zenith',
   '/button-styles': 'Button variations — Fallen Zenith',
+  '/button-backgrounds': 'Button backgrounds — Fallen Zenith',
 }
 
 export default function App() {
@@ -20,7 +22,7 @@ export default function App() {
   useEffect(() => {
     const path = pathname.replace(/\/$/, '') || '/'
     document.title = titles[path] || 'Pagina non trovata — Fallen Zenith'
-    document.documentElement.lang = path === '/button-styles' ? 'en' : 'it'
+    document.documentElement.lang = ['/button-styles', '/button-backgrounds'].includes(path) ? 'en' : 'it'
     if (previousPath.current !== pathname) {
       window.scrollTo(0, 0)
       document.getElementById('main')?.focus({ preventScroll: true })
@@ -39,6 +41,7 @@ export default function App() {
         <Route path="*" element={<div className="page"><h1>Pagina non trovata</h1><p><Link to="/">Torna alla Home</Link></p></div>} />
       </Route>
       <Route path="button-styles" element={<ButtonStyles />} />
+      <Route path="button-backgrounds" element={<ButtonBackgrounds />} />
     </Routes>
   )
 }

@@ -36,18 +36,18 @@
 
 .update-card {
   display: block;
-  min-height: 248px;
-  background: transparent url('../assets/update-card-frame.png') center/100% 100% no-repeat;
+  min-height: 184px;
   filter: drop-shadow(0 18px 28px #0008);
   transition: filter .2s ease;
 }
 
 .update-card article {
+  position: relative;
   display: flex;
-  min-height: 248px;
+  min-height: 184px;
   flex-direction: column;
   justify-content: center;
-  padding: 44px clamp(58px, 9vw, 94px);
+  padding: 28px clamp(58px, 9vw, 94px);
 }
 
 .update-card time,
@@ -181,8 +181,8 @@
 @media (max-width: 600px) {
   .updates-page { padding: 48px 12px 88px; }
   .updates-grid { gap: 14px; }
-  .update-card { min-height: 232px; }
-  .update-card article { min-height: 232px; padding: 38px 44px; }
+  .update-card { min-height: 176px; }
+  .update-card article { min-height: 176px; padding: 24px 44px; }
   .update-card p { font-size: 14px; }
   .update-post { margin: 38px auto 80px; }
   .update-back { margin: 20px 24px 0; }

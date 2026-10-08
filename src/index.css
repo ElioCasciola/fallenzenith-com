@@ -49,3 +49,23 @@ main:focus { outline: none; }
   }
   .page { padding-top: 65px; }
 }
+
+/* Fixed slices give Contacts and Updates the same gold rim at every size. */
+.gold-frame {
+  --gold-frame-width: 32px;
+  position: relative;
+  isolation: isolate;
+}
+
+.gold-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: var(--gold-frame-width) solid transparent;
+  border-image: url('./assets/contact-panel-frame.png') 140 fill / var(--gold-frame-width) stretch;
+}
+
+@media (max-width: 600px) {
+  .gold-frame { --gold-frame-width: 24px; }
+}

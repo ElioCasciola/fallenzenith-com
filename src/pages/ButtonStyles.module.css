@@ -11,3 +11,24 @@
 .corners button:before,.corners button:after{content:'';position:absolute;width:10px;height:10px;border-color:#8b613b;border-style:solid}.corners button:before{left:0;top:0;border-width:1px 0 0 1px}.corners button:after{right:0;bottom:0;border-width:0 1px 1px 0}.corners button:hover:before,.corners button:hover:after,.corners button[aria-pressed=true]:before,.corners button[aria-pressed=true]:after{border-color:#c3482e}.corners button[aria-pressed=true]{background:#b4844a08}
 .medallion{margin-top:22px}.medallion button{flex:0 1 88px;aspect-ratio:1;border-radius:50%;border:1px solid #785737;background:radial-gradient(ellipse at 50% 25%,#271c16,#100d0c);padding:5px;font-size:11px;box-shadow:inset 0 0 0 4px #100d0c,inset 0 0 0 5px #4b3222}.medallion button:hover,.medallion button[aria-pressed=true]{border-color:#d4a15e;box-shadow:inset 0 0 0 4px #100d0c,inset 0 0 0 5px #89291f}.showcase footer{text-align:center;font-size:12px;color:#818181;padding:35px 24px 50px}@media(max-width:850px){.showcase main{grid-template-columns:1fr;max-width:600px}.buttons{gap:14px}}@media(max-width:400px){.showcase main{padding:0 14px}.sample{padding:23px 16px}.buttons{gap:8px}.showcase button{font-size:11px}.type button{font-size:12px}}@media(prefers-reduced-motion:reduce){.showcase button{transition:none}}
 
+
+.lancet button, .chamfer button { isolation: isolate; background: #927047; }
+.lancet button { clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 10px 100%, 0 50%); }
+.chamfer button { clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% calc(100% - 7px), calc(100% - 7px) 100%, 7px 100%, 0 calc(100% - 7px), 0 7px); }
+.lancet button::before, .chamfer button::before { content: ''; position: absolute; inset: 1px; z-index: -1; clip-path: inherit; background: #131316; }
+.doubleRim button { border: 1px solid #8d6a43; background: #111114; box-shadow: inset 0 0 0 3px #111114, inset 0 0 0 4px #79593a; }
+.bevel button { border: 1px solid #7d6549; border-radius: 3px; background: linear-gradient(#242426, #101013); box-shadow: inset 0 2px #ccb28125, inset 0 -3px #0009, 0 3px 5px #0008; }
+.arch button { border: 1px solid #88613a; border-radius: 28% 28% 3px 3px / 30% 30% 3px 3px; background: radial-gradient(ellipse at 50% 0, #292222, #111013 75%); }
+.engraved button { background: #191819; border: 1px solid #373131; text-shadow: 0 1px #000, 0 -1px #a9895520; box-shadow: inset 0 0 14px #0009; }
+.engraved button::before, .engraved button::after { content: ''; position: absolute; width: 7px; height: 7px; border: solid #967346; }
+.engraved button::before { left: 4px; top: 4px; border-width: 1px 0 0 1px; }
+.engraved button::after { right: 4px; bottom: 4px; border-width: 0 1px 1px 0; }
+.ironPlate button { border: 1px solid #515157; border-radius: 3px; background: radial-gradient(circle at 6px 6px, #ac8150 0 1px, transparent 1.7px), radial-gradient(circle at calc(100% - 6px) calc(100% - 6px), #ac8150 0 1px, transparent 1.7px), linear-gradient(#232327, #111114); box-shadow: inset 0 1px #ffffff12; }
+.diamondTabs button { border-block: 1px solid #82623e; background: #141215; }
+.diamondTabs button::before, .diamondTabs button::after { content: ''; position: absolute; top: calc(50% - 3px); width: 6px; height: 6px; background: #9a754a; transform: rotate(45deg); }
+.diamondTabs button::before { left: 0; } .diamondTabs button::after { right: 0; }
+.rails button { border-block: 1px solid #99774b; background: linear-gradient(90deg, transparent, #1d1b1d 25% 75%, transparent); }
+.rails button::after { content: ''; position: absolute; bottom: -4px; left: 35%; right: 35%; height: 1px; background: #775435; }
+.garnet button { border: 1px solid #82603a; border-radius: 3px; background: #121013; box-shadow: inset 0 0 0 3px #151113, inset 0 0 0 4px #582522; }
+.lancet button:is(:hover, [aria-pressed=true]), .chamfer button:is(:hover, [aria-pressed=true]) { background: #c99b61; }
+.doubleRim button:is(:hover, [aria-pressed=true]), .bevel button:is(:hover, [aria-pressed=true]), .arch button:is(:hover, [aria-pressed=true]), .engraved button:is(:hover, [aria-pressed=true]), .ironPlate button:is(:hover, [aria-pressed=true]), .diamondTabs button:is(:hover, [aria-pressed=true]), .rails button:is(:hover, [aria-pressed=true]), .garnet button:is(:hover, [aria-pressed=true]) { border-color: #c99b61; filter: brightness(1.15); }
