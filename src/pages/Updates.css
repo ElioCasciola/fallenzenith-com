@@ -21,14 +21,6 @@
   text-shadow: 0 2px 2px #000, 0 0 18px #8e1f1a30;
 }
 
-.updates-heading p {
-  margin: 12px 0 0;
-  color: #a79b8c;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 16px;
-  font-style: italic;
-}
-
 .updates-grid {
   display: grid;
   gap: 24px;
@@ -76,15 +68,6 @@
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 15px;
   line-height: 1.6;
-}
-
-.update-card span {
-  margin-top: 12px;
-  color: #ad6b3b;
-  font-family: Cinzel, Georgia, serif;
-  font-size: 10px;
-  letter-spacing: .12em;
-  text-transform: uppercase;
 }
 
 .update-card:is(:hover, :focus-visible) {
