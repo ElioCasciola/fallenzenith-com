@@ -175,6 +175,7 @@
 
 .contacts-feather,
 .contacts-seal {
+  height: auto;
   position: absolute;
   z-index: 2;
   pointer-events: none;

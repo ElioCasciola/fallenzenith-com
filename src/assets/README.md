@@ -22,3 +22,17 @@ File: `src/assets/button-frame.png`
 Created with the built-in ImageGen tool using the supplied reference, with transparent background.
 
 Prompt: Create exactly one blank horizontal fantasy game UI button inspired by the reference. Remove all feathers entirely. Symmetric elongated frame with matching pointed ends, thin ornate beveled gold double border, subtle small center peaks at top and bottom. Dark cracked charcoal stone inset, restrained ember-red fine inner rim and tiny cracks. Blank spacious center. Crisp detailed illustrated game UI, polished gold metal and charcoal stone. Single complete centered button, tightly cropped landscape canvas, small transparent margin. Genuine transparent alpha outside the button. No feather, quill, wings, text, letters, symbols, watermark, surrounding splashes, detached particles, duplicate variants, sheet or backdrop.
+
+
+# Optimized page artwork
+
+Contacts and Updates share `contact-panel-frame.webp` (1774 × 887, WebP quality 95,
+original alpha and border slices retained). `contact-feather.webp` (645 × 624),
+`contact-wax-seal.webp` (348 × 341), and the navigation's
+`button-frame-no-center-spikes.webp` (720 × 240) use lossless WebP after resizing
+for up to three times their maximum displayed widths. Decorative contact images
+have explicit dimensions and asynchronous decoding.
+
+The original PNGs are retained outside the project in the local task's
+`optimized-assets/originals` folder. The original spiked `button-frame.png`
+continues to serve the button style gallery.

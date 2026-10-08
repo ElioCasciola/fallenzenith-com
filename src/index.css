@@ -63,7 +63,7 @@ main:focus { outline: none; }
   inset: 0;
   pointer-events: none;
   border: var(--gold-frame-width) solid transparent;
-  border-image: url('./assets/contact-panel-frame.png') 140 fill / var(--gold-frame-width) stretch;
+  border-image: url('./assets/contact-panel-frame.webp') 140 fill / var(--gold-frame-width) stretch;
 }
 
 @media (max-width: 600px) {

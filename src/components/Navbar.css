@@ -41,7 +41,7 @@
   transform: translateY(-50%);
   z-index: -1;
   pointer-events: none;
-  background: transparent url('../assets/button-frame-no-center-spikes.png') center/100% 100% no-repeat;
+  background: transparent url('../assets/button-frame-no-center-spikes.webp') center/100% 100% no-repeat;
   filter: brightness(.68) saturate(.85) contrast(1.18) drop-shadow(0 3px 2px #0008);
   transition: filter .3s ease;
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import contactFeather from '../assets/contact-feather.png'
-import contactSeal from '../assets/contact-wax-seal.png'
+import contactFeather from '../assets/contact-feather.webp'
+import contactSeal from '../assets/contact-wax-seal.webp'
 import './Contacts.css'
 
 const email = 'elio.casciola@gmail.com'
@@ -21,7 +21,7 @@ export default function Contacts() {
   return (
     <section className="contacts-page" aria-labelledby="contacts-title">
       <div className="contacts-plaque gold-frame">
-        <img className="contacts-feather" src={contactFeather} alt="" aria-hidden="true" />
+        <img className="contacts-feather" src={contactFeather} width="645" height="624" decoding="async" alt="" aria-hidden="true" />
 
         <div className="contacts-content">
           <h1 id="contacts-title">Contacts</h1>
@@ -50,7 +50,7 @@ export default function Contacts() {
           </div>
         </div>
 
-        <img className="contacts-seal" src={contactSeal} alt="" aria-hidden="true" />
+        <img className="contacts-seal" src={contactSeal} width="348" height="341" decoding="async" alt="" aria-hidden="true" />
       </div>
     </section>
   )
