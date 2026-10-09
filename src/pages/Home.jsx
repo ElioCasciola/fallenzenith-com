@@ -1,5 +1,4 @@
-import logo from '../assets/logo-home-static.webp'
-import animatedLogo from '../assets/logo-home-particles.webp'
+import AnimatedLogo from '../components/AnimatedLogo.jsx'
 import contactFrame from '../assets/contact-panel-frame.webp'
 import contactFeather from '../assets/contact-feather.webp'
 import contactSeal from '../assets/contact-wax-seal.webp'
@@ -27,10 +26,7 @@ export default function Home() {
   return (
     <div className="home">
       <h1 className="home-logo">
-        <picture>
-          <source media="(prefers-reduced-motion: reduce)" srcSet={logo} />
-          <img src={animatedLogo} width="1280" height="854" alt="Fallen Zenith" fetchPriority="high" decoding="async" onLoad={preloadPageArtwork} />
-        </picture>
+        <AnimatedLogo onLoad={preloadPageArtwork} />
       </h1>
     </div>
   )

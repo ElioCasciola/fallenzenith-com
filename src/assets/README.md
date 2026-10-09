@@ -36,3 +36,20 @@ have explicit dimensions and asynchronous decoding.
 The original PNGs are retained outside the project in the local task's
 `optimized-assets/originals` folder. The original spiked `button-frame.png`
 continues to serve the button style gallery.
+
+
+## Current Safari-friendly logo playback
+
+Logo animation now uses `fallen-zenith-loop.mp4`: silent H.264 Main, 800 × 534,
+30 fps, three-second loop, YUV 4:2:0 and fast-start metadata (151 KB).
+`AnimatedLogo` presents a 61 KB poster until playback begins. If autoplay is
+rejected it uses `fallen-zenith-loop-fallback.webp`; Reduce Motion selects the
+still poster and never starts a video. The logo remains labelled for assistive
+technology throughout playback. Original replaced media is backed up outside
+the project in the local task's `safari-media/originals` folder.
+
+The portfolio intro uses `/intro-safari.mp4` (silent H.264, 30 fps, fast start),
+with explicit muted inline playback. It skips the overlay if playback fails or
+takes more than four seconds to start, and skips it for Reduce Motion. Its
+dark background blends with the site's background rather than relying on WebM
+alpha support. Native Safari testing remains necessary on the affected devices.
