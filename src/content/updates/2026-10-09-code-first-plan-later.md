@@ -1,7 +1,7 @@
 ---
 title: "“I’ll Write the Code First, Then We’ll See”: Fallen Zenith’s First Lesson"
 date: 2026-10-09
-excerpt: "From coding without a plan to a text-based MVP in C#: why I decided to rebuild Fallen Zenith from the foundations."
+excerpt: "What I learned by starting with the code and why I decided to go back to basics."
 ---
 
 When I started writing the code for Fallen Zenith, I was convinced that the most important thing was to get straight to work. I had an idea for a game, I knew the basics of C#, and I saw no reason to spend time planning something I could just start programming.
