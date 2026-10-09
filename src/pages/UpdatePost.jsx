@@ -21,6 +21,7 @@ export default function UpdatePost() {
       </header>
       <div className="update-body">
         <Markdown source={post.body} />
+        <p>-Elio</p>
       </div>
     </article>
   )
