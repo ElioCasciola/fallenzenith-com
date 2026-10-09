@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
-import { Link, Navigate, Route, Routes, useLocation } from 'react-router'
+import { Link, matchPath, Navigate, Route, Routes, useLocation } from 'react-router'
 import SiteLayout from './components/SiteLayout.jsx'
+import { getUpdate } from './lib/updates.js'
 import Home from './pages/Home.jsx'
 import Updates from './pages/Updates.jsx'
 import UpdatePost from './pages/UpdatePost.jsx'
@@ -21,7 +22,9 @@ export default function App() {
   const previousPath = useRef(pathname)
   useEffect(() => {
     const path = pathname.replace(/\/$/, '') || '/'
-    document.title = titles[path] || 'Pagina non trovata — Fallen Zenith'
+    const updateMatch = matchPath('/updates/:slug', path)
+    const post = updateMatch ? getUpdate(updateMatch.params.slug) : null
+    document.title = post ? `${post.title} — Fallen Zenith` : titles[path] || 'Pagina non trovata — Fallen Zenith'
     document.documentElement.lang = ['/button-styles', '/button-backgrounds'].includes(path) ? 'en' : 'it'
     if (previousPath.current !== pathname) {
       window.scrollTo(0, 0)
